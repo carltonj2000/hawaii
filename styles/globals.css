@@ -1,16 +1,28 @@
+@tailwind base;
+
+/* Write your own custom base styles here */
+
+/* Start purging... */
+@tailwind components;
+/* Stop purging. */
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  @apply bg-gray-50 dark:bg-gray-900;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+#
+/* Write your own custom component styles here */
+.links {
+  @apply text-blue-500 no-underline text-xl
+  text-accent-1 dark:text-blue-300 font-semibold;
 }
 
-* {
-  box-sizing: border-box;
+.grad {
+  background-image: linear-gradient(to right, red, yellow);
 }
+/* Start purging... */
+@tailwind utilities;
+/* Stop purging. */
+
+/* Your own custom utilities */
