@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Hibiscus from "./Hibiscus";
-import FlagOfHawaii from "./FlagOfHawaii";
 import Camera from "./Camera";
 import VideoCamera from "./VideoCamera";
 import Calender from "./Calender";
@@ -15,14 +14,15 @@ export enum Pages {
 
 export default function Nav({
   activePage = Pages.Pictures,
+  title = "Hawaii",
 }: {
   activePage: Pages;
+  title: string;
 }) {
   const isActive = (page: Pages) =>
     "p1 rounded-xl" + (page === activePage ? " shadow-lg bg-indigo-300" : "");
-
   return (
-    <nav className="py-4 px-6 flex justify-between shadow-md bg-indigo-100">
+    <nav className="z-2 py-4 px-6 flex justify-between shadow-md bg-indigo-100">
       <div className="flex space-x-6 items-center">
         <Link href="/">
           <a className={`links${isActive(Pages.Pictures)}`}>
@@ -45,6 +45,7 @@ export default function Nav({
           </a>
         </Link>
       </div>
+      <div className="text-3xl font-bold text-gray-500">{title}</div>
       <Hibiscus />
     </nav>
   );

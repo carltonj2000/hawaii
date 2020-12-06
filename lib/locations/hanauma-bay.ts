@@ -2,12 +2,8 @@ const hanauma = {
   location: "hanaumabay",
   name: "Hanauma Bay",
   gps: ["21.273070778306643", "-157.69878754730888"],
-  activities: [
-    ["snorkeling", null],
-    ["turtles", null],
-  ],
-  planedDate: null,
-  actualDate: null,
+  activities: ["snorkeling", "turtles"],
+  date: null,
   mainImage: "hanauma-bay-2.png",
   imageInfo: [["hanauma-bay/examples", "web download"]],
   images: [
