@@ -1,7 +1,7 @@
 import { compareAsc } from "date-fns";
 import royalkona from "./royal-kona-resort";
 import hanaumBay from "./hanauma-bay";
-import { stringify } from "querystring";
+import vegasDepart from "./vegas-depart";
 
 const locationsInfo = [royalkona, hanaumBay];
 
@@ -113,3 +113,5 @@ export const schedule = () => {
     ],
   };
 };
+
+export const map = () => ({ accessToken: process.env.ACCESS_TOKEN });

@@ -13,14 +13,7 @@ body {
 
 #
 /* Write your own custom component styles here */
-.links {
-  @apply text-blue-500 no-underline text-xl
-  text-accent-1 dark:text-blue-300 font-semibold;
-}
 
-.grad {
-  background-image: linear-gradient(to right, red, yellow);
-}
 /* Start purging... */
 @tailwind utilities;
 /* Stop purging. */
