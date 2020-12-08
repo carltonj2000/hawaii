@@ -1,22 +1,22 @@
-import { useEffect } from "react";
-import { callbackify } from "util";
+import { useEffect, useState } from "react";
 import Layout from "../components/layout";
 import { Pages } from "../components/nav";
-import { map } from "../lib/locations";
+import { map } from "../lib/mapLocations";
 
-const setupMapBox = (accessToken) => {
+const setupMapBox = (accessToken, geoJson) => {
   mapboxgl.accessToken = accessToken;
 
   function setupMap(center) {
-    if (!mapboxgl.accessToken) return alert("need a mapbox token to continue");
+    if (!mapboxgl.accessToken)
+      return console.log("need a mapbox token to continue");
     const map = new mapboxgl.Map({
       container: "map",
       style: "mapbox://styles/mapbox/streets-v11",
       center,
-      zoom: 14,
+      zoom: 8,
     });
     const nav = new mapboxgl.NavigationControl();
-    map.addControl(nav, "top-left");
+    map.addControl(nav, "bottom-right");
 
     const directions = new MapboxDirections({
       accessToken: mapboxgl.accessToken,
@@ -24,7 +24,20 @@ const setupMapBox = (accessToken) => {
       profile: "mapbox/cycling",
     });
 
-    map.addControl(directions, "top-left");
+    map.addControl(directions, "bottom-left");
+    geoJson.features.forEach(function (marker) {
+      var el = document.createElement("div");
+      el.className = "marker";
+      el.style.backgroundImage = marker.svg;
+      el.style.width = "30px";
+      el.style.height = "30px";
+
+      el.addEventListener("click", function () {
+        window.alert(marker.message);
+      });
+
+      new mapboxgl.Marker(el).setLngLat(marker.coordinates).addTo(map);
+    });
   }
 
   function successLocation(position) {
@@ -32,19 +45,20 @@ const setupMapBox = (accessToken) => {
   }
 
   function errorLocation(position) {
-    setupMap([-115.179153, 36.114662]);
+    setupMap([-155.99039300342224, 19.63233770531766]);
   }
-
   navigator.geolocation.getCurrentPosition(successLocation, errorLocation, {
     enableHighAccuracy: true,
   });
 };
 
-export default function Map({ accessToken }) {
+export default function Map({ accessToken, geoJson }) {
+  const [atToggle, atToggleSet] = useState(true);
   useEffect(() => {
-    if (accessToken) setupMapBox(accessToken);
-    else setTimeout(() => setupMapBox(accessToken), 1000);
-  }, []);
+    if (accessToken && typeof mapboxgl !== undefined)
+      setupMapBox(accessToken, geoJson);
+    else setTimeout(() => atToggleSet(!atToggle), 1000);
+  }, [atToggle]);
   return (
     <Layout activePage={Pages.Map}>
       <main className="bg-indigo-50">

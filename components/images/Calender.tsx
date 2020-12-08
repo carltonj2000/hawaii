@@ -1,6 +1,6 @@
 import { style1, style2 } from "./Map";
 
-const Calendar = () => (
+const Calender = () => (
   <svg
     className="w-12 h-12"
     viewBox="0 0 20 20"
@@ -21,4 +21,4 @@ const Calendar = () => (
   </svg>
 );
 
-export default Calendar;
+export default Calender;

@@ -1,7 +1,8 @@
 const royalkona = {
   location: "royalkona",
   name: "Royal Kona",
-  gps: ["19.63168088265592", "-155.99040373068252"],
+  coordinates: [19.63168088265592, -155.99040373068252],
+  svg: "home",
   activities: ["lodging"],
   date: new Date(2020, 11, 14),
   mainImage: "royal-kona-resort-2.png",

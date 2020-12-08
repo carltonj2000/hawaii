@@ -1,9 +1,9 @@
 import Link from "next/link";
-import Hibiscus from "./Hibiscus";
-import Camera from "./Camera";
-import VideoCamera from "./VideoCamera";
-import Calender from "./Calender";
-import Map from "./Map";
+import Hibiscus from "./images/Hibiscus";
+import Camera from "./images/Camera";
+import VideoCamera from "./images/VideoCamera";
+import Calender from "./images/Calender";
+import Map from "./images/Map";
 
 export enum Pages {
   Pictures,
