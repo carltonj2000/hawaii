@@ -1,4 +1,6 @@
-const hapunaBeach = {
+import { LocationT } from "./index";
+
+const hapunaBeach: LocationT = {
   location: "hapunaBeach",
   name: "hapunaBeach",
   coordinates: [19.99349089903893, -155.8257353635802],

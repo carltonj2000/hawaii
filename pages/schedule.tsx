@@ -4,7 +4,6 @@ import { GetStaticProps } from "next";
 import { schedule } from "../lib/schedule";
 
 export default function Schedule({ schedule }) {
-  console.log(schedule);
   return (
     <Layout activePage={Pages.Pictures}>
       <main className="flex justify-center bg-indigo-50">

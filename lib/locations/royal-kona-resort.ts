@@ -1,5 +1,7 @@
-const royalkona = {
-  location: "royalkona",
+import { LocationT } from "./index";
+
+const royalKona: LocationT = {
+  location: "royalKona",
   name: "Royal Kona",
   coordinates: [19.63168088265592, -155.99040373068252],
   svg: "home",
@@ -16,4 +18,4 @@ const royalkona = {
   ],
 };
 
-export default royalkona;
+export default royalKona;

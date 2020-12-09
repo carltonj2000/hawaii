@@ -3,32 +3,33 @@ import vegasDeparture from "./vegas-departure";
 import konaArrival from "./kona-arrival";
 import oakDeparture from "./oak-departure";
 
-import royalkona from "./royal-kona-resort";
+import royalKona from "./royal-kona-resort";
 
 import hapunaBeach from "./hapuna-beach";
 import boilingPots from "./boiling-pots";
+import rainbowFalls from "./rainbow-falls";
+// import kapohoTidePools from "./kapoho-tide-pools"; // overflow in 2018
 
-export type LocaitonT = {
+type ImageT = [number, string, number, string, string];
+type ImageInfoT = [string, string];
+export type LocationT = {
   location: string;
   name: string;
-  coordinates: [number, number];
-  images: [
-    [
-      imageInfo: number,
-      image: string,
-      rotation: number,
-      name: string,
-      description: string
-    ]
-  ];
-  svg: string;
+  coordinates?: number[];
+  images?: ImageT[];
+  svg?: string;
   activities: string[];
+  imageInfo?: ImageInfoT[];
+  date?: Date;
+  mainImage?: string;
 };
 
-export const locationsInfo: LocaitonT[] = [
-  royalkona,
+export const locationsInfo: LocationT[] = [
+  royalKona,
   hapunaBeach,
   boilingPots,
+  rainbowFalls,
+  // kapohoTidePools, // overflow in 2018
   vegasDeparture,
   konaArrival,
   konaDeparture,
