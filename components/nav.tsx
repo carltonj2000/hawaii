@@ -4,6 +4,7 @@ import Camera from "./images/Camera";
 import VideoCamera from "./images/VideoCamera";
 import Calender from "./images/Calender";
 import Map from "./images/Map";
+import ClipboardList from "./images/ClipboardList";
 
 export enum Pages {
   Pictures,
@@ -41,7 +42,7 @@ export default function Nav({
         </Link>
         <Link href="/schedule">
           <a className={`links${isActive(Pages.Schedule)}`}>
-            <Calender />
+            <ClipboardList />
           </a>
         </Link>
       </div>

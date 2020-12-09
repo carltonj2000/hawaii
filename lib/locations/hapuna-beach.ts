@@ -2,7 +2,7 @@ import { LocationT } from "./index";
 
 const hapunaBeach: LocationT = {
   location: "hapunaBeach",
-  name: "hapunaBeach",
+  name: "Hapuna Beach",
   coordinates: [19.99349089903893, -155.8257353635802],
   activities: ["white sand beach", "snorkeling around cliff north of beach"],
   svg: "rss",

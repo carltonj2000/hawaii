@@ -9,6 +9,10 @@ import hapunaBeach from "./hapuna-beach";
 import boilingPots from "./boiling-pots";
 import rainbowFalls from "./rainbow-falls";
 // import kapohoTidePools from "./kapoho-tide-pools"; // overflow in 2018
+import papakoleaBeach from "./papakolea-beach";
+import kilaueaIkiCrater from "./kilauea-iki-crater";
+
+import thaiThaiBistro from "./thai-thai-bistro";
 
 type ImageT = [number, string, number, string, string];
 type ImageInfoT = [string, string];
@@ -29,7 +33,12 @@ export const locationsInfo: LocationT[] = [
   hapunaBeach,
   boilingPots,
   rainbowFalls,
+  papakoleaBeach,
+  kilaueaIkiCrater,
   // kapohoTidePools, // overflow in 2018
+  // food
+  thaiThaiBistro,
+  // travel
   vegasDeparture,
   konaArrival,
   konaDeparture,

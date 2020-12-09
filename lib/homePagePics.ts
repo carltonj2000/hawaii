@@ -7,7 +7,7 @@ export const homePagePics = () =>
     const mainImage = mainPic.length === 0 ? l.images[0] : mainPic[0];
     const image = {
       src: `/img/${l.imageInfo[mainImage[0]][0]}/${mainImage[1]}`,
-      alt: mainImage[3],
+      alt: l.name,
       location: `/pictures/${l.location}`,
     };
     a.push(image);

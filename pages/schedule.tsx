@@ -5,7 +5,7 @@ import { schedule } from "../lib/schedule";
 
 export default function Schedule({ schedule }) {
   return (
-    <Layout activePage={Pages.Pictures}>
+    <Layout activePage={Pages.Schedule}>
       <main className="flex justify-center bg-indigo-50">
         <table className="m-6 shadow-lg bg-white rounded-sm text-left">
           <thead>

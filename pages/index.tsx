@@ -21,7 +21,7 @@ export default function Home({ images }) {
                 />
               </a>
             </Link>
-            <div className="absolute z-1 bottom-3 right-3 text-lg font-bold text-indigo-100">
+            <div className="px-2 py-0 opacity-70 bg-gray-600 rounded-full absolute z-1 bottom-4 right-3 text-lg font-bold text-indigo-100">
               {i.alt}
             </div>
           </div>

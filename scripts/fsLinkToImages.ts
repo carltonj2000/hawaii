@@ -38,7 +38,7 @@ import srcRoot from "./srcRoot";
           fs.symlinkSync(src, dst);
         }
       } else {
-        console.log(colors.green("  creating linked (from to)"));
+        console.log(colors.red("  creating linked (from to)"));
         console.log("   ", colors.blue(dstSub));
         console.log("   ", colors.cyan(srcSub));
         fs.mkdirSync(path.parse(dst).dir, { recursive: true });
