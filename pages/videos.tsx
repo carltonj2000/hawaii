@@ -3,7 +3,7 @@ import { Pages } from "../components/nav";
 
 export default function Videos({ images }) {
   return (
-    <Layout activePage={Pages.Videos}>
+    <Layout activePage={Pages.Videos} title="Hawaii Videos">
       <main className="flex flex-col items-center bg-indigo-50">
         <h1 className="text-xl py-4 font-semibold text-gray-500">
           Vietnam North To South
@@ -13,9 +13,9 @@ export default function Videos({ images }) {
           height="315"
           title="Vietnam North To South"
           src="https://www.youtube.com/embed/Z3CMb2qenog"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
         <h1 className="text-xl py-4 font-semibold text-gray-500">
           Hue Motorcycling
@@ -25,13 +25,11 @@ export default function Videos({ images }) {
           height="315"
           title="Hue Motorcycling"
           src="https://www.youtube.com/embed/DF3o9nidGNA"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
       </main>
     </Layout>
   );
 }
-
-// <div className="flex justify-center text-3xl">Videos Coming Soon</div>

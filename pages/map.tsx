@@ -3,6 +3,8 @@ import Layout from "../components/layout";
 import { Pages } from "../components/nav";
 import { map } from "../lib/mapLocations";
 
+declare var mapboxgl: any;
+
 const setupMapBox = (accessToken, geoJson) => {
   mapboxgl.accessToken = accessToken;
 
@@ -69,7 +71,7 @@ export default function Map({ accessToken, geoJson }) {
     else setTimeout(() => atToggleSet(!atToggle), 1000);
   }, [atToggle]);
   return (
-    <Layout activePage={Pages.Map}>
+    <Layout activePage={Pages.Map} title="Hawaii Map">
       <main className="bg-indigo-50">
         <div
           id="map"
@@ -81,4 +83,4 @@ export default function Map({ accessToken, geoJson }) {
   );
 }
 
-export const getStaticProps: GetStaticProps = () => ({ props: map() });
+export const getStaticProps = () => ({ props: map() });

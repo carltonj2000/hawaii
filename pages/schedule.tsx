@@ -1,11 +1,10 @@
 import Layout from "../components/layout";
 import { Pages } from "../components/nav";
-import { GetStaticProps } from "next";
 import { schedule } from "../lib/schedule";
 
 export default function Schedule({ schedule }) {
   return (
-    <Layout activePage={Pages.Schedule}>
+    <Layout activePage={Pages.Schedule} title="Hawaii Schedule">
       <main className="flex justify-center bg-indigo-50">
         <table className="m-6 shadow-lg bg-white rounded-sm text-left">
           <thead>
@@ -48,4 +47,4 @@ export default function Schedule({ schedule }) {
   );
 }
 
-export const getStaticProps: GetStaticProps = () => ({ props: schedule() });
+export const getStaticProps = () => ({ props: schedule() });

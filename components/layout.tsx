@@ -2,7 +2,7 @@ import Head from "next/head";
 import Nav from "./nav";
 import { Pages } from "../components/nav";
 
-export default function Layout({ children, activePage, ...rest }) {
+export default function Layout({ children, activePage, title, ...rest }) {
   return (
     <div className="max-w-6xl mx-auto shadow-lg">
       <Head>
@@ -25,7 +25,7 @@ export default function Layout({ children, activePage, ...rest }) {
         )}
       </Head>
 
-      <Nav {...{ activePage }} {...rest} />
+      <Nav {...{ activePage, title }} {...rest} />
       {children}
       <footer className="bg-indigo-100 p-5">
         <div className="flex justify-center tracking-wide text-gray-500">

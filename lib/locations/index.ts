@@ -46,7 +46,9 @@ export const locationsInfo: LocationT[] = [
 ];
 
 export const locations = () =>
-  locationsInfo.map((l) => ({ params: { location: l.location } }));
+  locationsInfo
+    .filter((l) => typeof l.images !== "undefined")
+    .map((l) => ({ params: { location: l.location } }));
 
 export const location = (location) => {
   const f = locationsInfo.filter((l) => l.location === location);

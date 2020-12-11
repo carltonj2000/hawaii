@@ -1,7 +1,11 @@
 import { style1, style2 } from "./Map";
 
-const Clipboard = () => (
-  <svg class="w-12 h-12" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+const ClipboardList = () => (
+  <svg
+    className="w-12 h-12"
+    viewBox="0 0 20 20"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <defs>
       <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
         <stop offset="0%" style={style2} />
@@ -17,4 +21,4 @@ const Clipboard = () => (
     ></path>
   </svg>
 );
-export default Clipboard;
+export default ClipboardList;

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { GetStaticProps } from "next";
 import Layout from "../components/layout";
 import { Pages } from "../components/nav";
 import homePagePics from "../lib/homePagePics";
@@ -31,6 +30,4 @@ export default function Home({ images }) {
   );
 }
 
-export const getStaticProps: GetStaticProps = () => ({
-  props: { images: homePagePics() },
-});
+export const getStaticProps = () => ({ props: { images: homePagePics() } });
