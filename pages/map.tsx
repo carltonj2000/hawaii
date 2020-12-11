@@ -65,19 +65,25 @@ const setupMapBox = (accessToken, geoJson) => {
 
 export default function Map({ accessToken, geoJson }) {
   const [atToggle, atToggleSet] = useState(true);
+  const [mapLoaded, mapLoadedSet] = useState(false);
   useEffect(() => {
-    if (accessToken && typeof mapboxgl !== "undefined")
+    if (accessToken && typeof mapboxgl !== "undefined") {
       setupMapBox(accessToken, geoJson);
-    else setTimeout(() => atToggleSet(!atToggle), 1000);
+      mapLoadedSet(true);
+    } else setTimeout(() => atToggleSet(!atToggle), 1000);
   }, [atToggle]);
   return (
     <Layout activePage={Pages.Map} title="Hawaii Map">
       <main className="bg-indigo-50">
-        <div
-          id="map"
-          className="w-auto"
-          style={{ height: "calc(100vh - 160px)" }}
-        ></div>
+        {mapLoaded ? (
+          <div
+            id="map"
+            className="w-auto"
+            style={{ height: "calc(100vh - 160px)" }}
+          ></div>
+        ) : (
+          <div>Map Loading ...</div>
+        )}
       </main>
     </Layout>
   );
