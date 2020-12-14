@@ -6,6 +6,7 @@
     "dev": "next dev",
     "dbg": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
+    "export": "next build && next export",
     "start": "next start",
     "link": "ts-node --project ./scripts/tsconfig.json ./scripts/fsLinkToImages.ts"
   },

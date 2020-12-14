@@ -11,6 +11,7 @@ import rainbowFalls from "./rainbow-falls";
 // import kapohoTidePools from "./kapoho-tide-pools"; // overflow in 2018
 import papakoleaBeach from "./papakolea-beach";
 import kilaueaIkiCrater from "./kilauea-iki-crater";
+import blackSandBeach from "./black-sand-beach";
 
 import thaiThaiBistro from "./thai-thai-bistro";
 
@@ -34,6 +35,7 @@ export const locationsInfo: LocationT[] = [
   boilingPots,
   rainbowFalls,
   papakoleaBeach,
+  blackSandBeach,
   kilaueaIkiCrater,
   // kapohoTidePools, // overflow in 2018
   // food
