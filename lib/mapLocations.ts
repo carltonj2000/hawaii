@@ -5,7 +5,7 @@ const validSvgs = ["rss", "marker", "home", "heart", "airplane"];
 
 const geoJson = (features) => ({ geoJson: { features } });
 
-export const map = () => {
+export const mapLocations = () => {
   const locations = locationsInfo
     .filter((l) => l.coordinates)
     .map(({ location, name, coordinates, svg, activities }) => ({

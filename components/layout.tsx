@@ -8,21 +8,17 @@ export default function Layout({ children, activePage, title, ...rest }) {
       <Head>
         <title>Hawaii 2020 December</title>
         <link rel="icon" href="/favicon.ico" />
-        {activePage === Pages.Map && (
-          <>
-            <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
-            <link
-              href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css"
-              rel="stylesheet"
-            />
-            <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
-            <link
-              rel="stylesheet"
-              href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css"
-              type="text/css"
-            />
-          </>
-        )}
+        <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+        <link
+          href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css"
+          rel="stylesheet"
+        />
+        <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+        <link
+          rel="stylesheet"
+          href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css"
+          type="text/css"
+        />
       </Head>
 
       <Nav {...{ activePage, title }} {...rest} />
