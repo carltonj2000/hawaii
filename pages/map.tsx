@@ -5,7 +5,7 @@ import { map } from "../lib/mapLocations";
 
 declare var mapboxgl: any;
 
-const setupMapBox = (accessToken, geoJson) => {
+const setupMapBox = async (accessToken, geoJson) => {
   mapboxgl.accessToken = accessToken;
 
   function setupMap(center) {

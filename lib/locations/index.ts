@@ -56,7 +56,7 @@ export const location = (location) => {
   const f = locationsInfo.filter((l) => l.location === location);
   const m = f.map((l) =>
     l.images.map((image) => ({
-      src: `/img/${l.imageInfo[image[0]][0]}/${image[1]}`,
+      src: `/img/hawaii/${l.imageInfo[image[0]][0]}/${image[1]}`,
       alt: image[3],
     }))
   );
