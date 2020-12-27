@@ -1,5 +1,12 @@
 # Hawaii
 
+## Setup
+
+```bash
+docker build -t hawaii .
+docker run -d -p 3000:3000 hawaii
+```
+
 ## History
 
 ```bash
@@ -10,6 +17,7 @@ yarn add --dev typescript @types/react @types/node
 npm run dev
 mv index.js index.jsx
 mv _app.js _app.jsx
+npx next telemetry disable
 ```
 
 ## Image results
