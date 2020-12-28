@@ -1,5 +1,25 @@
 # Hawaii
 
+In order to release this site to Digital Ocean do the following.
+
+```bash
+# commands to run on development computer
+yarn do:pics # upload picture to digital ocean
+# commands to run on digital ocean
+cd /home/carltonj2000/do20041/sites/tinaandcarlton/git
+git clone git@github.com:carltonj2000/hawaii.git
+cd hawaii
+docker build -t hawaii
+# commands to run on development computer for a service
+docker service create \
+  --publish published=3000,target=3000 \
+  --mount type=bind,src=/Users/carltonjoseph/Pictures/pics2020/hawaii,dst=/carltonData/cj_pics/pics2020/hawaii \
+  --name hawaii \
+  hawaii
+# commands to run on development computer for a stack
+docker stack deploy hawaii --compose-file docker-compose.yml
+```
+
 ## Setup
 
 ```bash
