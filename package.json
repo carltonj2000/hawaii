@@ -8,6 +8,7 @@
     "build": "next build",
     "export": "next build && next export",
     "start": "next start",
+    "serve": "http-server -p 4000 out",
     "db": "docker build -t hawaii .",
     "dr": "docker run -t -d -p 3000:3000 hawaii",
     "dv": "docker run -t -d -p 3000:3000 -v /Users/carltonjoseph/Pictures/pics2020/hawaii:/carltonData/cj_pics/pics2020/hawaii hawaii",
@@ -27,5 +28,8 @@
     "tailwindcss": "^2.0.1",
     "ts-node": "^9.1.1",
     "typescript": "^4.1.2"
+  },
+  "devDependencies": {
+    "http-server": "^0.12.3"
   }
 }
