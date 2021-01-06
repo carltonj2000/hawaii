@@ -1,0 +1,9 @@
+version: "3.7"
+
+services:
+  hawaii:
+    image: hawaii
+    ports:
+      - 3000:3000
+    volumes:
+      - /renderws/carltonData/cj_pics/pics2020/hawaii:/carltonData/cj_pics/pics2020/hawaii

@@ -1,5 +1,10 @@
 # Hawaii
 
+To Do
+
+- generalize script `do:pics` to `dl:pics` to setup pics locally
+- add Kaluahine Falls at Waipi'o valley beach and Hiilawe Falls
+
 In order to release this site to Digital Ocean do the following.
 
 ```bash
@@ -9,15 +14,23 @@ yarn do:pics # upload picture to digital ocean
 cd /home/carltonj2000/do20041/sites/tinaandcarlton/git
 git clone git@github.com:carltonj2000/hawaii.git
 cd hawaii
-docker build -t hawaii
-# commands to run on development computer for a service
+docker build -t hawaii .
+docker run -v /renderws/carltonData/cj_pics/pics2020/hawaii:/carltonData/cj_pics/pics2020/hawaii -p 3000:3000 hawaii
+# commands to run on a mac development computer for a service
 docker service create \
   --publish published=3000,target=3000 \
   --mount type=bind,src=/Users/carltonjoseph/Pictures/pics2020/hawaii,dst=/carltonData/cj_pics/pics2020/hawaii \
   --name hawaii \
   hawaii
+# commands to run on the renderws development computer for a service
+docker service create \
+  --publish published=3000,target=3000 \
+  --mount type=bind,src=/renderws/carltonData/cj_pics/pics2020/hawaii,dst=/carltonData/cj_pics/pics2020/hawaii \
+  --name hawaii \
+  hawaii
 # commands to run on development computer for a stack
-docker stack deploy hawaii --compose-file docker-compose.yml
+docker stack deploy hawaii --compose-file docker-compose.mac.yml
+docker stack deploy hawaii --compose-file docker-compose.renderws.yml
 ```
 
 ## Setup

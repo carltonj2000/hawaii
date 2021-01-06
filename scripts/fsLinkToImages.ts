@@ -27,9 +27,20 @@ import { contentBase, container } from "./contentBase";
         console.log("   ", contentSub);
         console.log("   ", lnSub);
         fs.mkdirSync(path.parse(ln).dir, { recursive: true });
-        if (fs.existsSync(ln)) fs.rmSync(ln, { force: true });
-        if (fs.lstatSync(ln).isSymbolicLink()) fs.unlinkSync(ln);
+        console.log("   ", "dir made", path.parse(ln).dir);
+        if (fs.existsSync(ln)) {
+          if (fs.lstatSync(ln).isSymbolicLink()) {
+            console.log("   ", "unlinking", ln);
+            fs.unlinkSync(ln);
+            console.log("   ", "unlinked", ln);
+          } else {
+            console.log("   ", "rm'ing", ln);
+            fs.rmSync(ln, { force: true });
+            console.log("   ", "rm'ed", ln);
+          }
+        }
         fs.symlinkSync(content, ln);
+        console.log("   ", "new link", ln);
         continue;
       }
       if (fs.existsSync(ln)) {

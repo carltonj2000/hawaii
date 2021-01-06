@@ -10,10 +10,8 @@ export default function Location({ location }) {
       <main className="grid grid-cols-4 bg-indigo-50">
         {location.images.map((i, key) => (
           <div {...{ key }} className="flex items-center p-1">
-            <Image
-              className="object-cover"
-              width="400px"
-              height="300px"
+            <img
+              className="object-cover h-48 w-full"
               {...i}
             />
           </div>

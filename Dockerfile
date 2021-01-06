@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM node:15.5-alpine3.12
 WORKDIR /usr/app
 COPY ./package*.json ./
 RUN npm install --production
