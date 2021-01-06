@@ -12,7 +12,7 @@ export const mapLocations = () => {
       id: location,
       message: name,
       coordinates: [coordinates[1], coordinates[0]],
-      svg: svg ? `url(/svg/${svg}.svg)` : "url(/svg/home.svg)",
+      svg: svg ? `url(/hawaii/svg/${svg}.svg)` : "url(/hawaii/svg/home.svg)",
       activities,
     }));
   const uniqueLs = locations.reduce(
