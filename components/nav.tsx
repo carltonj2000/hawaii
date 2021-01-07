@@ -23,8 +23,8 @@ export default function Nav({
   const isActive = (page: Pages) =>
     "p1 rounded-xl" + (page === activePage ? " shadow-lg bg-indigo-300" : "");
   return (
-    <nav className="z-2 py-4 px-6 flex justify-between shadow-md bg-indigo-100">
-      <div className="flex space-x-6 items-center">
+    <nav className="z-2 py-4 px-4 sm:px-6 flex justify-between shadow-md bg-indigo-100">
+      <div className="flex space-x-4 sm:space-x-6 items-center">
         <Link href="/">
           <a className={`links${isActive(Pages.Pictures)}`}>
             <Camera />
@@ -46,7 +46,9 @@ export default function Nav({
           </a>
         </Link>
       </div>
-      <div className="text-3xl font-bold text-gray-500">{title}</div>
+      <div className="text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold text-gray-500">
+        {title}
+      </div>
       <Hibiscus />
     </nav>
   );

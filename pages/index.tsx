@@ -7,7 +7,7 @@ import homePagePics from "../lib/homePagePics";
 export default function Home({ images }) {
   return (
     <Layout activePage={Pages.Pictures} title="Hawaii">
-      <main className="grid grid-cols-4 bg-indigo-50">
+      <main className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 bg-indigo-50">
         {images.map((i, key) => (
           <div className="flex items-center p-1 relative" {...{ key }}>
             <Link href={i.location}>

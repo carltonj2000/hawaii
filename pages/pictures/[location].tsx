@@ -7,13 +7,10 @@ export default function Location({ location }) {
   if (!location) return <div>Nothing found error.</div>;
   return (
     <Layout activePage={Pages.Pictures} title={location.name}>
-      <main className="grid grid-cols-4 bg-indigo-50">
+      <main className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 bg-indigo-50">
         {location.images.map((i, key) => (
           <div {...{ key }} className="flex items-center p-1">
-            <img
-              className="object-cover h-48 w-full"
-              {...i}
-            />
+            <img className="object-cover h-48 w-full" {...i} />
           </div>
         ))}
       </main>

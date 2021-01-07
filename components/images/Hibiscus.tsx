@@ -2,7 +2,7 @@ const Hibiscus = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 100 600 200"
-    className="w-14 h-14 bg-indigo-300 rounded-full"
+    className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 bg-indigo-300 rounded-full"
   >
     <g id="layer1">
       <path
