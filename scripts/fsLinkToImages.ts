@@ -1,5 +1,5 @@
 import colors from "colors";
-import fs from "fs";
+import fs from "fs-extra";
 import path from "path";
 import { locationsInfo } from "../lib/locations";
 import { contentBase, container } from "./contentBase";
@@ -43,25 +43,20 @@ import { contentBase, container } from "./contentBase";
         console.log("   ", "new link", ln);
         continue;
       }
-      if (fs.existsSync(ln)) {
+      console.log(fs.existsSync(ln), fs.lstatSync(ln).isSymbolicLink(), ln);
+      if (fs.existsSync(ln) || fs.lstatSync(ln).isSymbolicLink()) {
+        console.log("here");
         if (!fs.lstatSync(ln).isSymbolicLink()) {
           console.log(" ", colors.red(`skipped NON symlink`));
           console.log("   ", colors.blue(lnSub));
           continue;
         } else {
-          const presentLink = fs.realpathSync(ln);
-          if (presentLink === content) {
-            console.log(colors.green("  already linked (from to)"));
-            console.log("   ", colors.cyan(contentSub));
-            console.log("   ", colors.blue(lnSub));
-          } else {
-            console.log(colors.green("  re-writing link (from to previous)"));
-            console.log("   ", colors.cyan(contentSub));
-            console.log("   ", colors.blue(lnSub));
-            console.log("   ", colors.magenta(presentLink));
-            fs.rmSync(ln);
-            fs.symlinkSync(content, ln);
-          }
+          console.log(colors.green("  re-writing link (from to previous)"));
+          console.log("   ", colors.cyan(contentSub));
+          console.log("   ", colors.blue(lnSub));
+          console.log("   ", colors.magenta(ln));
+          fs.unlinkSync(ln);
+          fs.symlinkSync(content, ln);
         }
       } else {
         console.log(colors.red("  creating link (from to)"));
