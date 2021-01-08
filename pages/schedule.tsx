@@ -22,7 +22,8 @@ export default function Schedule({ schedule }) {
                     {tr.locations.map((l) => (
                       <div key={l.location.replace(/\s/g)}>
                         <h1 className="text-sm sm:text-md md:text-lg lg:text-xl font-medium">
-                          {l.location}{" "}
+                          {l.location}
+                          {"-"}
                           <span className="text-sm sm:text-md md:text-lg lg:text-xl font-normal italic">
                             {l.time}
                           </span>

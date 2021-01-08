@@ -11,7 +11,7 @@ import { contentBase, container } from "./contentBase";
   console.log("Content:", colors.cyan(contentRoot));
   console.log("  Links:", colors.blue(lnRoot));
   for (let l of locationsInfo) {
-    if (!l.images) {
+    if (!l.images || (l.imgsSkip && l.imgsSkip)) {
       console.log(colors.green(l.name), colors.gray("skipped"));
       continue;
     }
@@ -43,8 +43,7 @@ import { contentBase, container } from "./contentBase";
         console.log("   ", "new link", ln);
         continue;
       }
-      console.log(fs.existsSync(ln), fs.lstatSync(ln).isSymbolicLink(), ln);
-      if (fs.existsSync(ln) || fs.lstatSync(ln).isSymbolicLink()) {
+      if (fs.existsSync(ln) && fs.lstatSync(ln).isSymbolicLink()) {
         console.log("here");
         if (!fs.lstatSync(ln).isSymbolicLink()) {
           console.log(" ", colors.red(`skipped NON symlink`));

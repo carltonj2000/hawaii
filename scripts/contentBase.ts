@@ -3,6 +3,8 @@ import os from "os";
 export let contentBase = "";
 export let container = false;
 
+// /Users/carltonjoseph/Pictures/pics2021/hawaii/kona1/cjiphone12
+
 const cc = (() => {
   switch (os.platform()) {
     case "linux":
@@ -23,7 +25,7 @@ const cc = (() => {
     case "darwin":
       switch (os.hostname()) {
         case "CARLTONs-MacBook-Pro.local":
-          return (contentBase = "/Users/carltonjoseph/Pictures/pics2020");
+          return (contentBase = "/Users/carltonjoseph/Pictures/pics2021");
         default:
           throw "Apple Mac rootDir not setup";
           break;

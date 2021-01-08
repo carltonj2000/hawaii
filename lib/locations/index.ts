@@ -5,6 +5,8 @@ import oakDeparture from "./oak-departure";
 
 import royalKona from "./royal-kona-resort";
 
+import kona1 from "./kona1";
+
 import hapunaBeach from "./hapuna-beach";
 import boilingPots from "./boiling-pots";
 import rainbowFalls from "./rainbow-falls";
@@ -27,16 +29,18 @@ export type LocationT = {
   imageInfo?: ImageInfoT[];
   date?: Date;
   mainImage?: string;
+  imgsSkip?: boolean;
 };
 
 export const locationsInfo: LocationT[] = [
-  royalKona,
-  hapunaBeach,
-  boilingPots,
-  rainbowFalls,
-  papakoleaBeach,
-  blackSandBeach,
-  kilaueaIkiCrater,
+  kona1,
+  { ...royalKona, imgsSkip: true },
+  { ...hapunaBeach, imgsSkip: true },
+  { ...boilingPots, imgsSkip: true },
+  { ...rainbowFalls, imgsSkip: true },
+  { ...papakoleaBeach, imgsSkip: true },
+  { ...blackSandBeach, imgsSkip: true },
+  { ...kilaueaIkiCrater, imgsSkip: true },
   // kapohoTidePools, // overflow in 2018
   // food
   thaiThaiBistro,
