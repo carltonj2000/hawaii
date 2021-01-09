@@ -32,7 +32,7 @@
     "typescript": "^4.1.2"
   },
   "devDependencies": {
-    "exif-parser": "^0.1.12",
-    "http-server": "^0.12.3"
+    "@types/fs-extra": "^9.0.6",
+    "sharp": "^0.27.0"
   }
 }
