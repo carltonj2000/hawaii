@@ -1,20 +1,26 @@
 import { LocationT } from "./index";
 
 const kona: LocationT = {
-  location: "Kona",
-  name: "Kona Day 1",
+  location: "kona1",
+  name: "Kona",
   coordinates: [19.63168088265592, -155.99040373068252],
   svg: "home",
-  activities: ["first day of fun"],
+  activities: ["airport", "royal kona resort"],
   date: new Date(2021, 1, 7),
-  mainImage: "royal-kona-resort-2.png",
-  imageInfo: [
-    ["kona1/cjiphone12", "Carlton's iPhone 12 Pro Max"],
-    ["kona1/cjsonya6400", "Carlton's Sony A6400"],
-  ],
+  mainImage: "IMG_0451.jpeg",
+  imageInfo: [["kona1/cjiphone12", "Carlton's iPhone 12 Pro Max"]],
   images: [
     [0, "IMG_0451.jpeg", 0, "", ""],
-    [0, "IMG_0494.jpeg", 0, "", ""],
+    [0, "IMG_0473.jpeg", 0, "", ""],
+    [0, "IMG_0475.jpeg", 0, "", ""],
+    [0, "IMG_0478.jpeg", 0, "", ""],
+    [0, "IMG_0487.jpeg", 0, "", ""],
+    [0, "IMG_0518.jpeg", 0, "", ""],
+    [0, "IMG_0550.jpeg", 0, "", ""],
+    [0, "IMG_0559.jpeg", 0, "", ""],
+    [0, "IMG_0583.jpeg", 0, "", ""],
+    [0, "IMG_0596.jpeg", 0, "", ""],
+    [0, "IMG_0603.jpeg", 0, "", ""],
   ],
 };
 

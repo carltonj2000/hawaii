@@ -6,6 +6,9 @@ import oakDeparture from "./oak-departure";
 import royalKona from "./royal-kona-resort";
 
 import kona1 from "./kona1";
+import alula1 from "./alula1";
+import manini1 from "./manini1";
+import kilauea1 from "./kilaueaVolcano1";
 
 import hapunaBeach from "./hapuna-beach";
 import boilingPots from "./boiling-pots";
@@ -34,6 +37,9 @@ export type LocationT = {
 
 export const locationsInfo: LocationT[] = [
   kona1,
+  alula1,
+  manini1,
+  kilauea1,
   { ...royalKona, imgsSkip: true },
   { ...hapunaBeach, imgsSkip: true },
   { ...boilingPots, imgsSkip: true },
@@ -60,7 +66,9 @@ export const location = (location) => {
   const f = locationsInfo.filter((l) => l.location === location);
   const m = f.map((l) =>
     l.images.map((image) => ({
-      src: `/hawaii/img/hawaii/${l.imageInfo[image[0]][0]}/${image[1]}`,
+      src: `/hawaii/img/hawaii/${
+        l.imageInfo[image[0]][0]
+      }/resized/size_240x180/${image[1]}`,
       alt: image[3],
     }))
   );
