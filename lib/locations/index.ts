@@ -9,6 +9,7 @@ import kona1 from "./kona1";
 import alula1 from "./alula1";
 import manini1 from "./manini1";
 import kilauea1 from "./kilaueaVolcano1";
+import waipio from "./waipio";
 
 import hapunaBeach from "./hapuna-beach";
 import boilingPots from "./boiling-pots";
@@ -40,6 +41,7 @@ export const locationsInfo: LocationT[] = [
   alula1,
   manini1,
   kilauea1,
+  waipio,
   { ...royalKona, imgsSkip: true },
   { ...hapunaBeach, imgsSkip: true },
   { ...boilingPots, imgsSkip: true },

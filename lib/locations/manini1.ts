@@ -6,7 +6,7 @@ const manini: LocationT = {
   coordinates: [19.471047038389386, -155.92084484866734],
   svg: "home",
   activities: ["manini and honaunau beach"],
-  date: new Date(2021, 1, 7),
+  date: new Date(2021, 1, 9),
   mainImage: "IMG_0451.jpeg",
   imageInfo: [["manini1/cjiphone12", "Carlton's iPhone 12 Pro Max"]],
   images: [
