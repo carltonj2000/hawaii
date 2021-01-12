@@ -16,7 +16,7 @@ git clone git@github.com:carltonj2000/hawaii.git
 cd hawaii
 docker build -t hawaii .
 docker run -v /renderws/carltonData/cj_pics/pics2020/hawaii:/carltonData/cj_pics/pics2020/hawaii -p 3000:3000 hawaii
-docker run -v /Users/carltonjoseph/Pictures/pics2021/hawaii:/carltonData/cj_pics/pics2020/hawaii -p 3000:3000 hawaii
+docker run -v /Users/carltonjoseph/Pictures/pics2021/hawaii:/carltonData/cj_pics/pics2021/hawaii -p 3000:3000 hawaii
 # commands to run on a mac development computer for a service
 docker service create \
   --publish published=3000,target=3000 \
