@@ -9,7 +9,11 @@ const kilaueaVolcano: LocationT = {
   date: new Date(2021, 1, 9),
   mainImage: "IMG_0612.jpeg",
   imageInfo: [
-    ["kilaueavolcano1/cjiphone12", "Carlton's iPhone 12 Pro Max"],
+    [
+      "kilaueavolcano1/cjiphone12",
+      "Carlton's iPhone 12 Pro Max",
+      Date(2021, 1, 9),
+    ],
     ["kilaueavolcano2/cjiphone12", "Carlton's iPhone 12 Pro Max"],
   ],
   images: [

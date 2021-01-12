@@ -22,7 +22,7 @@ import blackSandBeach from "./black-sand-beach";
 import thaiThaiBistro from "./thai-thai-bistro";
 
 type ImageT = [number, string, number, string, string];
-type ImageInfoT = [string, string];
+type ImageInfoT = [string, string, Date?];
 export type LocationT = {
   location: string;
   name: string;
