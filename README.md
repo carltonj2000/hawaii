@@ -3,7 +3,8 @@
 To Do
 
 - generalize script `do:pics` to `dl:pics` to setup pics locally
-- add Kaluahine Falls at Waipi'o valley beach and Hiilawe Falls
+  - make sure we only transfer used files
+- add two step beach text
 
 In order to release this site to Digital Ocean do the following.
 
@@ -32,6 +33,8 @@ docker service create \
 # commands to run on development computer for a stack
 docker stack deploy hawaii --compose-file docker-compose.mac.yml
 docker stack deploy hawaii --compose-file docker-compose.renderws.yml
+# cheap and dirty rsyn until a good rsync script is working
+rsync -av /Users/carltonjoseph/Pictures/pics2021/ carltonj2000@apps4tracking.com:/home/carltonj2000/do20041/sites/carltonData/cj_pics/pics2021/
 ```
 
 ## Setup
