@@ -12,7 +12,7 @@ export default function Home({ images }) {
           images.map((i, key) => (
             <div className="flex items-center p-1 relative" {...{ key }}>
               <Link href={i.location}>
-                <a>
+                <a className="w-full">
                   <img className="object-cover h-48 w-full" {...i} />
                 </a>
               </Link>
