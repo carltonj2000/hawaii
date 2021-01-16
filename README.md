@@ -5,6 +5,7 @@ To Do
 - generalize script `do:pics` to `dl:pics` to setup pics locally
   - make sure we only transfer used files
 - add two step beach text
+- don't print times for 11:59PM
 
 In order to release this site to Digital Ocean do the following.
 

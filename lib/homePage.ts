@@ -1,6 +1,6 @@
 import { locationsInfo } from "./locations";
 
-export const homePagePics = () =>
+export const homePage = () =>
   locationsInfo.reduce((a, l) => {
     if (typeof l.images === "undefined") return a;
     if (l.imgsSkip && l.imgsSkip) return a;
@@ -16,5 +16,3 @@ export const homePagePics = () =>
     a.push(image);
     return a;
   }, []);
-
-export default homePagePics;

@@ -11,7 +11,7 @@ import { contentBase, container } from "./contentBase";
   console.log("Content:", colors.cyan(contentRoot));
   console.log("  Links:", colors.blue(lnRoot));
   for (let l of locationsInfo) {
-    if (!l.images || (l.imgsSkip && l.imgsSkip)) {
+    if (!l.images || l.imgsSkip) {
       console.log(colors.green(l.name), colors.gray("skipped"));
       continue;
     }

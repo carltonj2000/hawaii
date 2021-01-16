@@ -60,21 +60,3 @@ export const locationsInfo: LocationT[] = [
   konaDeparture,
   oakDeparture,
 ];
-
-export const locations = () =>
-  locationsInfo
-    .filter((l) => typeof l.images !== "undefined")
-    .map((l) => ({ params: { location: l.location } }));
-
-export const location = (location) => {
-  const f = locationsInfo.filter((l) => l.location === location);
-  const m = f.map((l) =>
-    l.images.map((image) => ({
-      src: `/hawaii/img/hawaii/${
-        l.imageInfo[image[0]][0]
-      }/resized/size_240x180/${image[1]}`,
-      alt: image[3],
-    }))
-  );
-  return { name: f[0].name, images: m[0] };
-};
