@@ -6,7 +6,7 @@ const alula1: LocationT = {
   coordinates: [19.671598, -156.025967],
   svg: "rss",
   activities: ["turtles"],
-  date: new Date(2021, 1, 8),
+  date: new Date(2021, 0, 9),
   mainImage: "IMG_563.jpeg",
   imageInfo: [["alula1/cjiphone12", "Carlton's iPhone 12 Pro Max"]],
   images: [

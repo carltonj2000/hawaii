@@ -11,6 +11,9 @@ import manini1 from "./manini1";
 import kilauea1 from "./kilaueaVolcano1";
 import waipio from "./waipio";
 import greensand from "./green-sand-beach";
+import whitesand from "./whitesand";
+import blacksand from "./blacksand1";
+import hilo from "./hilo";
 
 import hapunaBeach from "./hapuna-beach";
 import boilingPots from "./boiling-pots";
@@ -44,6 +47,9 @@ export const locationsInfo: LocationT[] = [
   kilauea1,
   waipio,
   greensand,
+  whitesand,
+  blacksand,
+  hilo,
   { ...royalKona, imgsSkip: true },
   { ...hapunaBeach, imgsSkip: true },
   { ...boilingPots, imgsSkip: true },
