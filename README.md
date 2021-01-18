@@ -2,12 +2,11 @@
 
 To Do
 
-- generalize script `do:pics` to `dl:pics` to setup pics locally
-  - make sure we only transfer used files
-- add two step beach text
 - don't print times for 11:59PM
+- add swip to next picture but only with one finger, ignore pinch to zoom
+- add all option to view all pictures together
 
-In order to release this site to Digital Ocean do the following.
+# Digital Ocean Release
 
 ```bash
 # commands to run on development computer
