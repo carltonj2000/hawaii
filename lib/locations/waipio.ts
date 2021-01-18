@@ -6,7 +6,7 @@ const waipio: LocationT = {
   coordinates: [19.471047038389386, -155.92084484866734],
   svg: "home",
   activities: ["waipio valley"],
-  date: new Date(2021, 1, 10),
+  date: new Date(2021, 0, 10),
   mainImage: "IMG_0622.jpeg",
   imageInfo: [["waipio/cjiphone12", "Carlton's iPhone 12 Pro Max"]],
   images: [

@@ -6,7 +6,7 @@ const kilaueaVolcano: LocationT = {
   coordinates: [19.423892524549505, -155.28461347308874],
   svg: "home",
   activities: ["Volcano"],
-  date: new Date(2021, 1, 9),
+  date: new Date(2021, 0, 9),
   mainImage: "IMG_0612.jpeg",
   imageInfo: [
     ["kilaueavolcano1/cjiphone12", "Carlton's iPhone 12 Pro Max"],

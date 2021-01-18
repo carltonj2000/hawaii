@@ -6,7 +6,7 @@ const greensand: LocationT = {
   coordinates: [19.423892524549505, -155.28461347308874],
   svg: "home",
   activities: ["green sand beach"],
-  date: new Date(2021, 1, 11),
+  date: new Date(2021, 0, 11),
   mainImage: "IMG_0746.jpeg",
   imageInfo: [["greensand1/cjiphone12", "Carlton's iPhone 12 Pro Max"]],
   images: [

@@ -6,7 +6,7 @@ const kona: LocationT = {
   coordinates: [19.63168088265592, -155.99040373068252],
   svg: "home",
   activities: ["airport", "royal kona resort"],
-  date: new Date(2021, 1, 7),
+  date: new Date(2021, 0, 7),
   mainImage: "IMG_0451.jpeg",
   imageInfo: [["kona1/cjiphone12", "Carlton's iPhone 12 Pro Max"]],
   images: [
