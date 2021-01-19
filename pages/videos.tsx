@@ -12,9 +12,9 @@ export default function Videos({ images }) {
           width="370"
           height="205"
           src="https://www.youtube.com/embed/Vgvc9p3zOio"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
       </main>
     </Layout>
