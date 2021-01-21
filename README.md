@@ -2,9 +2,13 @@
 
 To Do
 
+- add sticky nav menu
 - don't print times for 11:59PM
-- add swip to next picture but only with one finger, ignore pinch to zoom
 - add all option to view all pictures together
+- fix map list details for each location
+- make app a pwa
+- allow addition of portrait pictures
+- add animations for picture transitions
 
 # Digital Ocean Release
 

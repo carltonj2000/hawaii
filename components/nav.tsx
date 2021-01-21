@@ -2,7 +2,7 @@ import Link from "next/link";
 import Hibiscus from "./images/Hibiscus";
 import Camera from "./images/Camera";
 import VideoCamera from "./images/VideoCamera";
-import Calender from "./images/Calender";
+import Home from "./images/Home";
 import Map from "./images/Map";
 import ClipboardList from "./images/ClipboardList";
 
@@ -49,7 +49,12 @@ export default function Nav({
       <div className="text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold text-gray-500">
         {title}
       </div>
-      <Hibiscus />
+      <div className="flex items-center">
+        <a href="localhost:3000/main" className="mr-4 text-icon">
+          <Home />
+        </a>
+        <Hibiscus />
+      </div>
     </nav>
   );
 }
