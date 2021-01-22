@@ -39,6 +39,7 @@ docker stack deploy hawaii --compose-file docker-compose.mac.yml
 docker stack deploy hawaii --compose-file docker-compose.renderws.yml
 # cheap and dirty rsyn until a good rsync script is working
 rsync -av /Users/carltonjoseph/Pictures/pics2021/ carltonj2000@apps4tracking.com:/home/carltonj2000/do20041/sites/carltonData/cj_pics/pics2021/
+rsync -av carltonjoseph@10.0.0.116:/Users/carltonjoseph/Pictures/pics2021/ /renderws/carltonData/cj_pics/pics2021/
 ```
 
 ## Setup
