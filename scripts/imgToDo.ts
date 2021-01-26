@@ -16,7 +16,7 @@ const doAccount = "carltonj2000@apps4tracking.com";
   console.log("  To:", colors.blue(doRoot));
   console.log("  At:", colors.gray(doAccount));
   for (let l of locationsInfo) {
-    if (!l.images) continue;
+    if (!l.images || l.imgsSkip) continue;
     for (let i of l.images) {
       const imgDir = path.join(l.imageInfo[i[0]][0], i[1]);
       const content = path.join(contentRoot, imgDir);

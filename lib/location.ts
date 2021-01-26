@@ -1,9 +1,9 @@
 import { locationsInfo } from "./locations";
 
-export const locations = () =>
-  locationsInfo
-    .filter((l) => typeof l.images !== "undefined" && !l.imgsSkip)
-    .map((l) => ({ params: { location: l.location } }));
+export const locations = locationsInfo
+  .filter((l) => typeof l.images !== "undefined")
+  .filter((l) => !l.imgsSkip)
+  .map((l) => ({ params: { location: l.location } }));
 
 export const location = (location) => {
   const locationsI = locationsInfo.filter(

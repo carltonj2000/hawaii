@@ -22,6 +22,10 @@ export default function Nav({
 }) {
   const isActive = (page: Pages) =>
     "p1 rounded-xl" + (page === activePage ? " shadow-lg bg-indigo-300" : "");
+  const gotoMain = () => {
+    console.log(window.location);
+    window.location.replace(`${window.location.origin}/main`);
+  };
   return (
     <nav className="z-2 py-4 px-4 sm:px-6 flex justify-between shadow-md bg-indigo-100">
       <div className="flex space-x-4 sm:space-x-6 items-center">
@@ -50,9 +54,9 @@ export default function Nav({
         {title}
       </div>
       <div className="flex items-center">
-        <a href="localhost:3000/main" className="mr-4 text-icon">
+        <div onClick={gotoMain} className="mr-4 text-icon">
           <Home />
-        </a>
+        </div>
         <Hibiscus />
       </div>
     </nav>

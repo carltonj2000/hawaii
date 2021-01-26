@@ -28,4 +28,4 @@ export default function Home({ images }) {
   );
 }
 
-export const getStaticProps = () => ({ props: { images: homePage() } });
+export const getStaticProps = () => ({ props: { images: homePage } });

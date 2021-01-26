@@ -20,7 +20,7 @@ cd /home/carltonj2000/do20041/sites/tinaandcarlton/git
 git clone git@github.com:carltonj2000/hawaii.git
 cd hawaii
 docker build -t hawaii .
-docker run -v /renderws/carltonData/cj_pics/pics2020/hawaii:/carltonData/cj_pics/pics2020/hawaii -p 3000:3000 hawaii
+docker run -v /renderws/carltonData/cj_pics/pics2021/hawaii:/carltonData/cj_pics/pics2021/hawaii -p 3000:3000 hawaii
 docker run -v /Users/carltonjoseph/Pictures/pics2021/hawaii:/carltonData/cj_pics/pics2021/hawaii -p 3000:3000 hawaii
 # commands to run on a mac development computer for a service
 docker service create \
@@ -40,6 +40,11 @@ docker stack deploy hawaii --compose-file docker-compose.renderws.yml
 # cheap and dirty rsyn until a good rsync script is working
 rsync -av /Users/carltonjoseph/Pictures/pics2021/ carltonj2000@apps4tracking.com:/home/carltonj2000/do20041/sites/carltonData/cj_pics/pics2021/
 rsync -av carltonjoseph@10.0.0.116:/Users/carltonjoseph/Pictures/pics2021/ /renderws/carltonData/cj_pics/pics2021/
+# release on renderWs via a local repo
+docker build -t hawaii .
+pushd /renderws/carltonData/cj2021/code/docker/renderws-webserver/renderws/label; \
+docker stack deploy -c docker-compose.tinaandcarlton.hawaii.yml renderws; \
+popd
 ```
 
 ## Setup
@@ -75,3 +80,9 @@ Sizes for 4 images on page.
 | ---: | ------: | ------: | -----: | -----: | ---: |
 |    1 |  796 kB |  1.1 MB | 581 kB | 209 kB |  jpg |
 |    2 |   73 kB |  105 kB |  60 kB |  19 kB | webp |
+
+### Ignore Below Here - Just Notes
+
+```
+
+```

@@ -39,10 +39,7 @@ export default function Location({ name, images, next, previous }) {
   );
 }
 
-export const getStaticPaths = () => ({
-  paths: locations(),
-  fallback: false,
-});
+export const getStaticPaths = () => ({ paths: locations, fallback: false });
 
 export const getStaticProps = ({ params }) => ({
   props: location(params.location),
